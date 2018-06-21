@@ -2,19 +2,19 @@
 ![Node Dependencies](https://david-dm.org/outflux/outflux.svg)
 ![TravisCI Status]()
 
-> OutFlux is a peer to peer based music streaming client/player similar to Popcorn Time for movies, created with Electron. I just started the project, feel free to do a pull request if you want.
+> OutFlux is a peer to peer based music streaming client/player similar to Popcorn Time for movies, created with Electron. Don't be suprised if the project dies.
 
 ## To Do
 ### Currently Implementing
-- Design UI
+- Core Functionality
+
 ### Planned
 
 - Add Music Player
-- Add peer to peer backend
+- Design UI
 
 ### Considerations
 - Equaliser for Player
-- Simplistic Design
 
 **(Stage: Experimental)**
 

@@ -4,13 +4,13 @@
   "description": "![Node Dependencies](https://david-dm.org/outflux/outflux.svg) ![CircleCI Status]()",
   "main": "main.js",
   "scripts": {
-    "start": "node ."
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OutFlux/OutFlux.git"
   },
-  "author": "",
+  "author": "sauravyash",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/OutFlux/OutFlux/issues"
