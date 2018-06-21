@@ -4,7 +4,7 @@
   "description": "![Node Dependencies](https://david-dm.org/outflux/outflux.svg) ![CircleCI Status]()",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/OutFlux/OutFlux/issues"
   },
-  "homepage": "https://github.com/OutFlux/OutFlux#readme"
+  "homepage": "https://github.com/OutFlux/OutFlux#readme",
+  "devDependencies": {
+    "electron": "^2.0.2"
+  }
 }
