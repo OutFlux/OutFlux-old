@@ -36,5 +36,5 @@ workflows:
     jobs:
       - npm testCI
     requires:
-      - buildLinuxApp 
+      - buildLinuxApp
 
