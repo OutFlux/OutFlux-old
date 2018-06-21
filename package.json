@@ -4,7 +4,8 @@
   "description": "![Node Dependencies](https://david-dm.org/outflux/outflux.svg) ![CircleCI Status]()",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "testCI": "node .circleci/testCI.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/OutFlux/OutFlux#readme",
   "devDependencies": {
-    "electron": "^2.0.2"
-  }
+    "assert": "^1.4.1",
+    "electron": "^2.0.2",
+    "spectron": "^3.8.0"
+  },
+  "dependencies": {}
 }
