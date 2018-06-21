@@ -5,4 +5,7 @@ jobs:
       - image: circleci/node:latest-browsers
     steps:
       - checkout
-      - run: echo "hello world"
+      - run: 
+          name: Running tests
+          command: make test
+      
