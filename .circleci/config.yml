@@ -10,14 +10,18 @@ jobs:
           command: sudo npm i -g npm
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-      - run: npm i assert --save-dev
-      - run: npm i spectron --save-dev
+      - run: 
+          name: Install Assert NPM Package
+          command: npm i assert --save-dev
+      - run: 
+          name: Install Spectron NPM Package
+          command: npm i spectron --save-dev
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-      - run: npm install electron-packager -g
-      - run: npm install electron-installer-debian -g
+      - run: sudo npm install electron-packager -g
+      - run: sudo npm install electron-installer-debian -g
 
 workflows:
   version: 2
