@@ -11,7 +11,7 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run: npm i assert --save-dev
-      - run: npm i assert --save-dev
+      - run: npm i spectron --save-dev
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
