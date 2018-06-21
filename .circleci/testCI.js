@@ -14,7 +14,6 @@ app.start().then(function () {
   // Verify the window is visible
   assert.equal(isVisible, true);
 }).then(function () {
-  
   // Get the window's title
   return app.client.getTitle()
 }).then(function (title) {
