@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  setup:
     docker:
       - image: circleci/node:latest-browsers
     steps:
@@ -22,15 +22,6 @@ jobs:
             - node_modules
       - run: sudo npm install electron-packager -g
       - run: sudo npm install electron-installer-debian -g
-
-workflows:
-  version: 2
-  init:
-    jobs:
-      - build
-      - test:
-          requires:
-            - build
   buildLinuxApp:
     jobs:
       - electron-packager . OutFlux --overwrite --platform=linux --arch=x64 --ignore=node_modules/.bin
@@ -41,4 +32,17 @@ workflows:
       - npm test
     requires:
       - buildLinuxApp
+
+workflows:
+  version: 2
+  init:
+    jobs:
+      - setup
+      - buildLinuxApp
+          requires:
+            - build
+      - testLinuxApp
+          requires:
+            - buildLinuxApp
+    
 
