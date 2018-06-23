@@ -27,10 +27,6 @@ jobs:
         - image: circleci/node:latest-browsers
     steps:
       - electron-packager . OutFlux --overwrite --platform=linux --arch=x64 --ignore=node_modules/.bin
-  testLinuxApp:
-    docker:
-      - image: circleci/node:latest-browsers
-    steps:
       - npm test
 
 workflows:
@@ -38,11 +34,7 @@ workflows:
   LinuxTest:
     jobs:
       - build
-      # - buildLinuxApp
-      #     requires:
-      #       - build
-      # - testLinuxApp
-      #     requires:
-      #       - buildLinuxApp
-    
+      - buildLinuxApp
+          requires:
+            - build
 
