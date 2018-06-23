@@ -22,7 +22,7 @@ jobs:
             - node_modules
       - run: sudo npm install electron-packager -g
       - run: sudo npm install electron-installer-debian -g
-  buildLinuxApp:
+  linuxApp:
     docker:
       - image: circleci/node:latest-browsers
     steps:
@@ -39,7 +39,7 @@ workflows:
   linuxTest:
     jobs:
       - build
-      - buildLinuxApp
+      - linuxApp
         requires:
           - build
           
