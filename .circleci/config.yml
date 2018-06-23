@@ -22,12 +22,6 @@ jobs:
             - node_modules
       - run: sudo npm install electron-packager -g
       - run: sudo npm install electron-installer-debian -g
-  buildLinuxApp:
-    jobs:
-      - electron-packager . OutFlux --overwrite --platform=linux --arch=x64 --ignore=node_modules/.bin
-  # testLinuxApp:
-  #   jobs:
-  #     - npm test
 
 workflows:
   version: 2
