@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  setup:
+  build:
     docker:
       - image: circleci/node:latest-browsers
     steps:
@@ -33,7 +33,7 @@ workflows:
   version: 2
   init:
     jobs:
-      - setup
+      - build
       - buildLinuxApp
           requires:
             - build
