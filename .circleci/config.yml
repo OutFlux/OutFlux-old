@@ -25,13 +25,9 @@ jobs:
   buildLinuxApp:
     jobs:
       - electron-packager . OutFlux --overwrite --platform=linux --arch=x64 --ignore=node_modules/.bin
-    requires:
-      - init
   testLinuxApp:
     jobs:
       - npm test
-    requires:
-      - buildLinuxApp
 
 workflows:
   version: 2
