@@ -18,6 +18,10 @@
 
 **(Stage: Experimental)**
 
+## Git Semantics
+I am trying to use [Vincent Driessen's](https://nvie.com/posts/a-successful-git-branching-model/) branching model. Tell me because I stuff up (im new to this stuff).
+
+
 ## Versioning
 
 For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Popcorn Time will be maintained according to the [Semantic Versioning](http://semver.org/) guidelines as much as possible.
