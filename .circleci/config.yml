@@ -24,15 +24,19 @@ jobs:
       - run: sudo npm install electron-installer-debian -g
   buildLinuxApp:
     docker:
-        - image: circleci/node:latest-browsers
+      - image: circleci/node:latest-browsers
     steps:
       - checkout
-      - electron-packager . OutFlux --overwrite --platform=linux --arch=x64 --ignore=node_modules/.bin
-      - npm test
+      - run:
+          name: Package app for linux
+          command: electron-packager . OutFlux --overwrite --platform=linux --arch=x64 --ignore=node_modules/.bin
+      - run:
+          name: test linux app
+          command: npm test
 
 workflows:
   version: 2
-  LinuxTest:
+  linuxTest:
     jobs:
       - build
       - buildLinuxApp
