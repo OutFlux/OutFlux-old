@@ -26,6 +26,7 @@ jobs:
     docker:
         - image: circleci/node:latest-browsers
     steps:
+      - checkout
       - electron-packager . OutFlux --overwrite --platform=linux --arch=x64 --ignore=node_modules/.bin
       - npm test
 
