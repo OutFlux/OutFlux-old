@@ -4,8 +4,8 @@
   "description": "![Node Dependencies](https://david-dm.org/outflux/outflux.svg) ![CircleCI Status]()",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "test": "node test"
+    "start": "electron app/",
+    "test": "node app/test.js"
   },
   "repository": {
     "type": "git",
