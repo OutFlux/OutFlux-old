@@ -3,7 +3,7 @@ var Application = require('spectron').Application
 var assert = require('assert')
 
 var app = new Application({
-  path: 'outflux-linux-x64/outflux'
+  path: './Outflux-linux-x64/outflux'
 })
 
 app.start().then(function () {
