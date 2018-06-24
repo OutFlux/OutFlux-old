@@ -4,7 +4,7 @@
   "description": "![Node Dependencies](https://david-dm.org/outflux/outflux.svg) ![CircleCI Status]()",
   "main": "./dist/main.js",
   "scripts": {
-    "start": "node init && electron .",
+    "start": "electron .",
     "test": "node test",
     "construct": "babel ./app/js -d ./dist/js"
   },
