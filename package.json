@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "test": "node test",
-    "construct": "babel ./app/js -d ./dist/js"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,11 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "electron": "^2.0.2",
-    "gulp": "^4.0.0"
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
   },
   "dependencies": {}
 }
