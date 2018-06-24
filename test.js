@@ -21,6 +21,8 @@ app.start().then(function () {
   assert.equal(title, 'OutFlux')
 }).then(function () {
   // Stop the application
+  console.log("Test is Successful!");
+  
   return app.stop()
 }).catch(function (error) {
   // Log any failures
