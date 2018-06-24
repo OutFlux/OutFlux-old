@@ -2,10 +2,11 @@
   "name": "outflux",
   "version": "0.1.0-alpha.0",
   "description": "![Node Dependencies](https://david-dm.org/outflux/outflux.svg) ![CircleCI Status]()",
-  "main": "main.js",
+  "main": "./dist/main.js",
   "scripts": {
     "start": "node init && electron .",
-    "test": "node test"
+    "test": "node test",
+    "construct": "babel ./app/js -d ./dist/js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,8 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "electron": "^2.0.2"
+    "electron": "^2.0.2",
+    "gulp": "^4.0.0"
   },
   "dependencies": {}
 }
