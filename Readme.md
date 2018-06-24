@@ -2,7 +2,7 @@
 ![Node Dependencies](https://david-dm.org/outflux/outflux.svg)
 [![CircleCI](https://circleci.com/gh/OutFlux/OutFlux.svg?style=shield)](https://circleci.com/gh/OutFlux/OutFlux)
 
-> OutFlux is a peer to peer based music streaming client/player similar to Popcorn Time for movies, created with Electron. Don't be suprised if the project dies.
+> OutFlux is a peer to peer based music streaming client/player similar to Popcorn Time, but for music, created with Electron. Don't be suprised if the project dies.
 
 ## To Do
 ### Currently Implementing
