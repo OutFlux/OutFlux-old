@@ -1,22 +1,24 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
 const babel = require('gulp-babel');
-const concat = require('gulp-concat');
  
-gulp.task('babel', () =>
-    gulp.src('app/**/*.js')
-        .pipe(babel({
-            presets: ['env']
-        }))
-        .pipe(gulp.dest('dist/'))
+gulp.task('babel', _ =>
+  gulp.src('app/**/*.js')
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(gulp.dest('dist/'))
 );
-gulp.task('scss', function(){
+gulp.task('scss', _ => {
   return gulp.src('app/css/scss/*.scss')
     .pipe(sass()) // Using gulp-sass
     .pipe(gulp.dest('dist/css'))
 });
 
+// 
+gulp.task('build', gulp
+  .series(gulp
+    .parallel('scss', 'babel')))
 
 
-gulp.task('build', ['scss', 'babel']);
+gulp.watch('app/**/*', gulp.series('build'));
