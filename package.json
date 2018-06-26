@@ -27,7 +27,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "hoek": "^4.2.1"
+    "hoek": "^5.0.3"
   },
   "dependencies": {}
 }
