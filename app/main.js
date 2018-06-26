@@ -6,7 +6,15 @@ let win
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({width: 800, height: 600})
+  win = new BrowserWindow({
+    name: "OutFlux",
+    width: 1280,
+    height: 800,
+    transparent: true,
+    frame: false,
+    toolbar: false,
+    titleBarStyle: 'hiddenInset'
+  });
 
   // and load the index.html of the app.
   win.loadFile(__dirname+'/index.html')

@@ -1,7 +1,12 @@
-const gulp = require('gulp')
-const sass = require('gulp-sass')
-const babel = require('gulp-babel')
- 
+// declare node Modules
+const gulp = require('gulp'),
+      sass = require('gulp-sass'),
+      babel = require('gulp-babel'),
+      concat = require('gulp-concat'),
+      rename = require('gulp-rename'),
+      uglify = require('gulp-uglify')
+
+// Converts ES7 JS to older JS
 gulp.task('babel', () =>
   gulp.src('app/**/*.js')
     .pipe(babel({
@@ -9,21 +14,36 @@ gulp.task('babel', () =>
     }))
     .pipe(gulp.dest('dist/'))
 )
-gulp.task('scss', () => {
-  return gulp.src('app/css/scss/*.scss')
+
+// Concats the JS scripts and Uglifies them
+gulp.task('jsUglify', () =>
+  gulp.src('dist/js/*.js')
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest('dist/js/'))
+    .pipe(rename('scripts.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js/'))
+)
+
+// converts SCSS to CSS
+gulp.task('scss', () => 
+  gulp.src('app/css/scss/*.scss')
     .pipe(sass()) // Using gulp-sass
     .pipe(gulp.dest('dist/css'))
-})
+)
 
-gulp.task('html', () => {
-  return gulp.src('app/index.html')
+// Updates the HTML files
+gulp.task('html', () => 
+  gulp.src('app/index.html')
     .pipe(gulp.dest('dist/'))
-})
+)
 
-// 
-gulp.task('build', gulp
-  .series(gulp
-    .parallel('scss', 'babel', 'html')))
+// A combination of all the tasks 
+gulp.task('build', 
+  gulp.series(
+    gulp.parallel('scss', 'babel', 'html'), 
+    'jsUglify'))
 
-
-gulp.watch('app/**/*', gulp.series('build'));
+// automatically runs when files are updated
+gulp.watch('app/**/*', 
+  gulp.series('build'))
