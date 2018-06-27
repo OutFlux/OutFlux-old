@@ -10,7 +10,7 @@ const gulp = require('gulp'),
 gulp.task('babel', () =>
   gulp.src('app/**/*.js')
     .pipe(babel({
-      presets: ['env']
+      presets: ['env', 'react']
     }))
     .pipe(gulp.dest('dist/'))
 )
@@ -27,7 +27,7 @@ gulp.task('jsUglify', () =>
 
 // converts SCSS to CSS
 gulp.task('scss', () => 
-  gulp.src('app/css/scss/*.scss')
+  gulp.src('app/css/*.scss')
     .pipe(sass()) // Using gulp-sass
     .pipe(gulp.dest('dist/css'))
 )

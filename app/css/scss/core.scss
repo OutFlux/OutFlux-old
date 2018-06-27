@@ -2,20 +2,32 @@
 html, body{
   border-radius: 8px; 
   margin: 0;
+  overflow: hidden;
 }
+
 html, body, div{
   height: 100%;
   width: 100%;
   float: left;
-  -webkit-user-select: none;
+  //-webkit-user-select: none;
 }
 
-#browser{
+#content{
   background-color: rgba(0,0,0,1);
-  height: calc(100% - 4em); 
+  height: calc(100% - 3.5em); 
 }
 
 #player{
-  background-color: rgba(141, 141, 141, 1);
-  height: 4em;
+  background-color: rgb(29, 29, 29);
+  height: 3.5em;
 }
+
+#sidebar {
+  -webkit-app-region: drag; 
+}
+
+/* 
+#browser{
+
+} 
+*/

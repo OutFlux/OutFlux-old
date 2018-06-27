@@ -1,0 +1,28 @@
+html, body {
+  border-radius: 8px;
+  margin: 0;
+  overflow: hidden; }
+
+html, body, div {
+  height: 100%;
+  width: 100%;
+  float: left; }
+
+#content {
+  background-color: black;
+  height: calc(100% - 3.5em); }
+
+#player {
+  background-color: #1d1d1d;
+  height: 3.5em; }
+
+#sidebar {
+  -webkit-app-region: drag; }
+
+/* 
+#browser{
+
+} 
+*/
+.row {
+  margin: 0; }
