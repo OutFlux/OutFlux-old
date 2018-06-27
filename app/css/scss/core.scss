@@ -1,8 +1,9 @@
 // core.scss
 html, body{
-  border-radius: 8px; 
+  border-radius: 4px; 
   margin: 0;
   overflow: hidden;
+  background-color: rgba(0,0,0,0);
 }
 
 html, body, div{
@@ -13,7 +14,7 @@ html, body, div{
 }
 
 #content{
-  background-color: rgba(0,0,0,1);
+  
   height: calc(100% - 3.5em); 
 }
 
@@ -24,6 +25,10 @@ html, body, div{
 
 #sidebar {
   -webkit-app-region: drag; 
+}
+
+#browser {
+  background-color: rgba(0,0,0,1);
 }
 
 /* 
