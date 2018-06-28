@@ -40,6 +40,12 @@ gulp.task('scss', () =>
     .pipe(gulp.dest('dist/css'))
 )
 
+// Updates the fonts
+gulp.task('html', () => 
+  gulp.src('app/css/fonts')
+    .pipe(gulp.dest('dist/css/fonts'))
+)
+
 // Updates the HTML files
 gulp.task('html', () => 
   gulp.src('app/index.html')

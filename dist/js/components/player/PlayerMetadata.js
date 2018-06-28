@@ -30,7 +30,37 @@ var PlayerMetadata = function (_React$Component) {
   _createClass(PlayerMetadata, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", { className: "col-3" });
+      return _react2.default.createElement(
+        "div",
+        { className: "col-3 row" },
+        _react2.default.createElement(
+          "div",
+          { id: "trackImg", className: "col-auto" },
+          _react2.default.createElement("img", { src: this.props.trackImg, alt: "" })
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "col", id: "trackMeta" },
+          _react2.default.createElement(
+            "div",
+            { id: "trackTitle" },
+            _react2.default.createElement(
+              "span",
+              null,
+              this.props.trackTitle
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { id: "trackArtists" },
+            _react2.default.createElement(
+              "span",
+              null,
+              this.props.trackArtist
+            )
+          )
+        )
+      );
     }
   }]);
 

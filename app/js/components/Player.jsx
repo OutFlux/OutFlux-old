@@ -6,11 +6,10 @@ import PlayerSecondaryController from "./player/PlayerSecondaryController"
  
 
 export default class Player extends React.Component{
-  
   render(){
     return (
       <div id="player">
-        <PlayerMetadata/>
+        <PlayerMetadata trackTitle={this.props.trackTitle} trackArtist={this.props.trackArtist} trackImg={this.props.trackImg} />
         <PlayerController/>
         <PlayerSecondaryController/>
       </div>

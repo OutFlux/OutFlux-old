@@ -35,6 +35,7 @@ var Browser = function (_React$Component) {
         { id: "browser", className: "col" },
         this.props.loggedin
       );
+      // may be useful: https://www.youtube.com/watch?v=_D1JGNidMr4
     }
   }]);
 

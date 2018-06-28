@@ -36,7 +36,12 @@ var Layout = function (_React$Component) {
   function Layout() {
     _classCallCheck(this, Layout);
 
-    return _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).call(this));
+
+    _this.title = "The Ways";
+    _this.artist = "Khalid";
+    _this.img = "https://media.npr.org/assets/img/2018/01/31/black-panther_sq-b2bd19381f3b69b605d2470c0d0e4dcd46fb632b-s900-c85.jpeg";
+    return _this;
   }
 
   _createClass(Layout, [{
@@ -51,7 +56,7 @@ var Layout = function (_React$Component) {
           _react2.default.createElement(_SideBar2.default, null),
           _react2.default.createElement(_Browser2.default, { loggedin: "true" })
         ),
-        _react2.default.createElement(_Player2.default, null)
+        _react2.default.createElement(_Player2.default, { trackTitle: this.title, trackArtist: this.artist, trackImg: this.img })
       );
     }
   }]);

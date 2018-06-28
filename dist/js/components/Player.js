@@ -45,7 +45,7 @@ var Player = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { id: "player" },
-        _react2.default.createElement(_PlayerMetadata2.default, null),
+        _react2.default.createElement(_PlayerMetadata2.default, { trackTitle: this.props.trackTitle, trackArtist: this.props.trackArtist, trackImg: this.props.trackImg }),
         _react2.default.createElement(_PlayerController2.default, null),
         _react2.default.createElement(_PlayerSecondaryController2.default, null)
       );

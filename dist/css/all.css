@@ -1,32 +1,139 @@
+/** Proxima-Nova **/
+/* Regular */
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url("./fonts/Proxima-Nova/Proxima-Nova-Regular.ttf");
+  font-weight: 400; }
+
+/* Bold */
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url("./fonts/Proxima-Nova/Proxima-Nova-Bold.ttf");
+  font-weight: 600; }
+
+/* Bolder */
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url("./fonts/Proxima-Nova/Proxima-Nova-Bolder.ttf");
+  font-weight: 700; }
+
+/* Condensed */
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url("./fonts/Proxima-Nova/Proxima-Nova-Condensed.ttf");
+  font-style: condensed; }
+
+/* Display */
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url("./fonts/Proxima-Nova/Proxima-Nova-Display.ttf");
+  font-style: oblique; }
+
+/* Semibold */
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url("./fonts/Proxima-Nova/Proxima-Nova-Semibold.ttf");
+  font-weight: 500; }
+
+/* Thin */
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url("./fonts/Proxima-Nova/Proxima-Nova-Thin.ttf");
+  font-weight: 200; }
+
+@font-face {
+  font-family: circular;
+  src: url("https://open.scdn.co/fonts/CircularSpUIv3T-Light.woff2") format("woff2"), url("https://open.scdn.co/fonts/CircularSpUIv3T-Light.woff") format("woff"), url("https://open.scdn.co/fonts/CircularSpUIv3T-Light.ttf") format("ttf");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: circular;
+  src: url("https://open.scdn.co/fonts/CircularSpUIv3T-Book.woff2") format("woff2"), url("https://open.scdn.co/fonts/CircularSpUIv3T-Book.woff") format("woff"), url("https://open.scdn.co/fonts/CircularSpUIv3T-Book.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: circular;
+  src: url("https://open.scdn.co/fonts/CircularSpUIv3T-Bold.woff2") format("woff2"), url("https://open.scdn.co/fonts/CircularSpUIv3T-Bold.woff") format("woff"), url("https://open.scdn.co/fonts/CircularSpUIv3T-Bold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: adobe-notdef;
+  src: url(https://platform-assets.typekit.net/AND-Regular.woff2) format("woff2"), url(https://platform-assets.typekit.net/AND-Regular.woff) format("woff"); }
+
 html, body {
   border-radius: 4px;
   margin: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  color: #fff;
+  -webkit-user-select: none; }
 
 html, body, div {
   height: 100%;
   width: 100%;
   float: left;
-  background-color: rgba(0, 0, 0, 0); }
+  background-color: rgba(0, 0, 0, 0);
+  display: block; }
 
 #content {
-  height: calc(100% - 3.5em); }
+  height: calc(100% - 4.5em); }
 
 #player {
-  background-color: #1d1d1d;
-  height: 3.5em; }
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 4.5em;
+  font-family: circular; }
 
 #sidebar {
-  -webkit-app-region: drag; }
+  -webkit-app-region: drag;
+  background-color: rgba(0, 0, 0, 0.9); }
 
 #browser {
-  background-color: black; }
+  background-color: rgba(16, 16, 16, 0.95);
+  font-family: Proxima-Nova;
+  font-weight: 400; }
 
-/* 
-#browser{
+#trackImg {
+  height: 56px;
+  width: 56px;
+  margin: auto 12px;
+  padding: 0.5%; }
+  #trackImg img[src]:not([src=""]) {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px; }
+  #trackImg img {
+    height: 0;
+    width: 0; }
 
-} 
-*/
+#trackMeta {
+  padding-top: 4px;
+  letter-spacing: 0.06em; }
+  #trackMeta div {
+    height: 50%; }
+    #trackMeta div span {
+      width: 100%;
+      display: inline-block;
+      font-style: normal;
+      font-weight: 200; }
+
+#trackTitle span {
+  vertical-align: -webkit-baseline-middle;
+  font-size: 0.9rem; }
+
+#trackArtists span {
+  vertical-align: super;
+  font-size: 0.8rem;
+  color: #ccc; }
+
 .row {
   margin: 0;
   padding: 0; }
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 0;
+  padding-left: 0; }
