@@ -32,5 +32,8 @@
     "gulp-uglify": "^3.0.0",
     "hoek": "^5.0.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
 }

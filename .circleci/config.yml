@@ -16,12 +16,16 @@ jobs:
       - run: 
           name: Install Spectron NPM Package
           command: npm i spectron --save-dev
+      - run: 
+          name: Install Electron Packager
+          command: sudo npm install electron-packager -g
+      - run: 
+          name: Install Electron Packager for linux
+          command: sudo npm install electron-installer-debian -g
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-      - run: sudo npm install electron-packager -g
-      - run: sudo npm install electron-installer-debian -g
       - run:
           name: Package app for linux
           command: electron-packager . OutFlux --overwrite --platform=linux --arch=x64 --ignore=node_modules/.bin

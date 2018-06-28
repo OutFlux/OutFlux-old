@@ -1,0 +1,56 @@
+/** Proxima-Nova **/
+/* Regular */
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('Proxima-Nova-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('Proxima-Nova-Bold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Bolder */
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('Proxima-Nova-Bolder.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Condensed */
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('Proxima-Nova-Condensed.ttf');
+    font-weight: normal;
+    font-style: condensed;
+}
+
+/* Display */
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('Proxima-Nova-Display.ttf');
+    font-weight: normal;
+    font-style: Display;
+}
+
+/* Semibold */
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('Proxima-Nova-Semibold.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Thin */
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('Proxima-Nova-Thin.ttf');
+    font-weight: 200;
+    font-style: normal;
+}

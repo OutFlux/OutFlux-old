@@ -6,13 +6,13 @@ var app = new Application({
   path: './OutFlux-linux-x64/OutFlux'
 })
 
-app.start().then(() => 
-  // Check if the window is visible
-  app.browserWindow.isVisible()
-).then( isVisible => {
-  console.log('Browser Window is visible');
+// Check if the window is visible
+app.start().then(() => {
+  return app.browserWindow.isVisible()  
+}).then( isVisible => {
+  console.log('Browser Window is visible')
   // Verify the window is visible
-  assert.equal(isVisible, true);
+  assert.equal(isVisible, true)
 }).then( () => {
   // Get the window's title
   return app.client.getTitle()
@@ -21,7 +21,7 @@ app.start().then(() =>
   assert.equal(title, 'OutFlux')
 }).then( () => {
   // Stop the application
-  console.log("Test is Successful!");
+  console.log("Test is Successful!")
   
   return app.stop()
 }).catch(error => 
