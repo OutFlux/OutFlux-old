@@ -23,5 +23,6 @@ app.start().then(function () {
   return app.stop()
 }).catch(function (error) {
   // Log any failures
-  console.error('Test failed', error.message)
+  console.error('Test failed:', error.message)
+  throw new Error('ERROR: TEST FAILED');
 })
