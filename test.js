@@ -6,26 +6,22 @@ var app = new Application({
   path: './OutFlux-linux-x64/OutFlux'
 })
 
-// Check if the window is visible
-app.start()
-  // .then(() => {
-  //   return app.browserWindow.isVisible()  })
-  // .then( isVisible => {
-  //   console.log('Browser Window is visible')
-  //   // Verify the window is visible
-  //   assert.equal(isVisible, true)})
-  .then( () => {
-    // Get the window's title
-    return app.client.getTitle()})
-  .then( title => {
-    // Verify the window's title
-    assert.equal(title, 'OutFlux')})
-  .then( () => {
-    // Stop the application
-    console.log("Test is Successful!")
-    
-    return app.stop()})
-  .catch(error => 
-    // Log any failures
-    console.error('Test failed: ', error.message)
-  )
+app.start().then(function () {
+  // Check if the window is visible
+  return app.browserWindow.isVisible()
+}).then(function (isVisible) {
+  // Verify the window is visible
+  assert.equal(isVisible, true)
+}).then(function () {
+  // Get the window's title
+  return app.client.getTitle()
+}).then(function (title) {
+  // Verify the window's title
+  assert.equal(title, 'OutFlux')
+}).then(function () {
+  // Stop the application
+  return app.stop()
+}).catch(function (error) {
+  // Log any failures
+  console.error('Test failed', error.message)
+})
