@@ -3,18 +3,19 @@ html, body{
   border-radius: 4px; 
   margin: 0;
   overflow: hidden;
-  background-color: rgba(0,0,0,0);
+  // background-color: rgba(0,0,0,0.8);
+
 }
 
 html, body, div{
   height: 100%;
   width: 100%;
   float: left;
+  background-color: rgba(0,0,0,0);
   //-webkit-user-select: none;
 }
 
 #content{
-  
   height: calc(100% - 3.5em); 
 }
 

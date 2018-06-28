@@ -10,6 +10,14 @@ const gulp = require('gulp'),
 gulp.task('babel', () =>
   gulp.src('app/**/*.js')
     .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(gulp.dest('dist/'))
+)
+
+gulp.task('jsx', () =>
+  gulp.src('app/**/*.jsx')
+    .pipe(babel({
       presets: ['env', 'react']
     }))
     .pipe(gulp.dest('dist/'))
@@ -18,11 +26,11 @@ gulp.task('babel', () =>
 // Concats the JS scripts and Uglifies them
 gulp.task('jsUglify', () =>
   gulp.src('dist/js/*.js')
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('dist/js/'))
-    .pipe(rename('scripts.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/js/'))
+  //   .pipe(concat('scripts.js'))
+  //   .pipe(gulp.dest('dist/js/'))
+  //   .pipe(rename('scripts.min.js'))
+  //   .pipe(uglify())
+  //   .pipe(gulp.dest('dist/js/'))
 )
 
 // converts SCSS to CSS
@@ -42,7 +50,7 @@ gulp.task('html', () =>
 gulp.task('build', 
   gulp.series(
     gulp.parallel('scss', 'babel', 'html'), 
-    'jsUglify'))
+    'jsx'))
 
 // automatically runs when files are updated
 gulp.watch('app/**/*', 
