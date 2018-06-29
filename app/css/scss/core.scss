@@ -25,9 +25,10 @@ html, body, div{
 }
 
 #player{
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,1);
   height: $playerHeight;
   font-family: circular;
+  font-weight: 200;
 }
 
 #sidebar {
@@ -36,7 +37,7 @@ html, body, div{
 }
 
 #browser {
-  background-color: rgba(16, 16, 16, 0.95);
+  background-color: rgba(16, 16, 16, 1);
   font-family: Proxima-Nova;
   font-weight: 400;
 }

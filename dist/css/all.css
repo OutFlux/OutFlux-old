@@ -81,16 +81,17 @@ html, body, div {
   height: calc(100% - 4.5em); }
 
 #player {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: black;
   height: 4.5em;
-  font-family: circular; }
+  font-family: circular;
+  font-weight: 200; }
 
 #sidebar {
   -webkit-app-region: drag;
   background-color: rgba(0, 0, 0, 0.9); }
 
 #browser {
-  background-color: rgba(16, 16, 16, 0.95);
+  background-color: #101010;
   font-family: Proxima-Nova;
   font-weight: 400; }
 
