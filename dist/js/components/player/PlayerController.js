@@ -30,7 +30,44 @@ var PlayerController = function (_React$Component) {
   _createClass(PlayerController, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", { className: "col-6" });
+      return _react2.default.createElement(
+        "div",
+        { className: "col-6" },
+        _react2.default.createElement(
+          "div",
+          { id: "playerButtons" },
+          _react2.default.createElement(
+            "div",
+            { className: "shuffle col-3" },
+            _react2.default.createElement("i", { className: "fa fa-random" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "play-previous col-2" },
+            _react2.default.createElement("i", { className: "fa fa-step-backward" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "play col-2" },
+            _react2.default.createElement("i", { className: "fa fa-play" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "play-next col-2" },
+            _react2.default.createElement("i", { className: "fa fa-step-forward" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "repeat col-3" },
+            _react2.default.createElement("i", { className: "fa fa-retweet" })
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { id: "progressBar" },
+          _react2.default.createElement("input", { type: "range", id: "bar" })
+        )
+      );
     }
   }]);
 
