@@ -1,6 +1,7 @@
 # OutFlux
 ![Node Dependencies](https://david-dm.org/outflux/outflux.svg)
 [![CircleCI](https://circleci.com/gh/OutFlux/OutFlux.svg?style=shield)](https://circleci.com/gh/OutFlux/OutFlux)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOutFlux%2FOutFlux.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FOutFlux%2FOutFlux?ref=badge_shield)
 
 > OutFlux is a peer to peer based music streaming client/player similar to Popcorn Time, but for music, created with Electron. Don't be suprised if the project dies.
 
@@ -51,3 +52,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
 ***
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOutFlux%2FOutFlux.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FOutFlux%2FOutFlux?ref=badge_large)
